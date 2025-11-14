@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Swadisht Meals — Home-cooked tiffin and daily meals in Warangal & Nashik. Daily menus, subscription plans, and contact for orders." />
+  <title>Swadisht Meals — Home-cooked Tiffin (Warangal & Nashik)</title>
+
+  <style>
+    /* Simple responsive, mobile-first inline CSS */
+    :root{
+      --bg: #fff8f2;
+      --card: #ffffff;
+      --accent: #d35400;
+      --muted: #6b7280;
+      --radius: 12px;
+      --maxw: 980px;
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      color-scheme: light;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:var(--bg);color:#111}
+    a{color:inherit}
+    header{
+      padding:18px 16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px;
+      border-bottom:1px solid rgba(0,0,0,0.04);
+      background:linear-gradient(90deg,#fff,#fff8f2);
+    }
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{
+      width:56px;height:56px;border-radius:10px;background:var(--accent);
+      color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;
+      font-size:20px;flex:0 0 56px;
+    }
+    h1{font-size:18px;margin:0}
+    .lead{margin:0;color:var(--muted);font-size:13px}
+    main{max-width:var(--maxw);margin:18px auto;padding:0 16px}
+    .card{
+      background:var(--card);padding:14px;border-radius:var(--radius);
+      box-shadow:0 10px 26px rgba(16,24,40,0.06);border:1px solid rgba(0,0,0,0.03);
+    }
+    .section + .section{margin-top:14px}
+    .grid{display:grid;grid-template-columns:1fr;gap:12px}
+    .menu-list{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+    .price{font-weight:700;color:var(--accent)}
+    .cta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:12px}
+    .btn{display:inline-block;padding:10px 14px;border-radius:10px;text-decoration:none;font-weight:700;box-shadow:none;border:none}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:#fff;border:1px solid rgba(0,0,0,0.06)}
+    table{width:100%;border-collapse:collapse;margin-top:8px}
+    th,td{padding:8px;border-bottom:1px dashed #eee;text-align:left;font-size:14px}
+    th{font-weight:700}
+    footer{margin-top:20px;padding:18px 0;color:var(--muted);text-align:center;font-size:13px}
+
+    /* Layout breakpoints */
+    @media(min-width:700px){
+      .grid{grid-template-columns:repeat(3,1fr)}
+    }
+    @media(min-width:1000px){
+      main{padding:0}
+    }
+
+    /* Small helper */
+    .muted{color:var(--muted);font-size:13px}
+    .contact a{color:var(--accent);text-decoration:none;font-weight:700}
+
+    /* Image styling */
+    .food-img{
+      width:100%;
+      height:140px;
+      object-fit:cover;
+      border-radius:10px;
+      margin-bottom:10px;
+      border:1px solid #eee;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <div class="logo" aria-hidden="true">SM</div>
+      <div>
+        <h1>Swadisht Meals</h1>
+        <p class="lead">Home-cooked tiffin & daily meals — Warangal & Nashik</p>
+      </div>
+    </div>
+
+    <div style="text-align:right;font-size:13px;color:var(--muted)">
+      <div>Serving</div>
+      <div style="font-weight:700">Warangal • Nashik</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Today's Menu -->
+    <section class="card section" aria-labelledby="today-title">
+      <h2 id="today-title" style="margin:0 0 8px 0;">Today's Menu</h2>
+      <p class="muted" style="margin:0 0 12px 0;">Fresh home-cooked meals prepared daily. Call or WhatsApp to order or ask about today's specials.</p>
+
+      <div class="grid" role="list">
+
+        <!-- Breakfast -->
+        <div class="card" role="listitem" aria-labelledby="breakfast">
+          <img class="food-img" src="https://images.unsplash.com/photo-1604908177079-8e2691d404ba?w=800" alt="Breakfast Idli">
+          <h3 id="breakfast" style="margin:0 0 8px 0;">Breakfast</h3>
+          <ul class="menu-list" aria-label="Breakfast menu">
+            <li>Idli (2) + Sambar & Chutney — <span class="price">₹50</span></li>
+            <li>Poha / Upma (seasonal) — <span class="price">₹45</span></li>
+            <li>Paratha + Curd (veg) — <span class="price">₹60</span></li>
+          </ul>
+        </div>
+
+        <!-- Lunch -->
+        <div class="card" role="listitem" aria-labelledby="lunch">
+          <img class="food-img" src="https://images.unsplash.com/photo-1543353071-873f17a7a088?w=800" alt="Lunch Thali">
+          <h3 id="lunch" style="margin:0 0 8px 0;">Lunch (Tiffin)</h3>
+          <ul class="menu-list" aria-label="Lunch menu">
+            <li>Rice • Dal • Seasonal Sabzi • Chapati (2) • Salad • Pickle — <span class="price">₹110</span></li>
+            <li>Special (Paneer) — <span class="price">₹150</span></li>
+            <li>Special (Chicken) — <span class="price">₹150</span></li>
+          </ul>
+        </div>
+
+        <!-- Dinner -->
+        <div class="card" role="listitem" aria-labelledby="dinner">
+          <img class="food-img" src="https://images.unsplash.com/photo-1565557623262-b46a12285234?w=800" alt="Dinner Roti Sabzi">
+          <h3 id="dinner" style="margin:0 0 8px 0;">Dinner</h3>
+          <ul class="menu-list" aria-label="Dinner menu">
+            <li>Roti/Bhakhri • Sabzi • Dal • Salad — <span class="price">₹100</span></li>
+            <li>Simple Thali (rice+roti+2 veg) — <span class="price">₹120</span></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="cta-row" aria-hidden="false">
+        <a class="btn btn-primary" href="tel:+916300886928">Call to Order • +91 6300886928</a>
+        <a class="btn btn-ghost" href="https://wa.me/916300886928" target="_blank" rel="noopener">Order on WhatsApp</a>
+        <a class="btn" href="#subscription" style="background:#fff;border:1px solid rgba(0,0,0,0.04)">View Subscription</a>
+      </div>
+    </section>
+
+    <!-- Subscription -->
+    <section id="subscription" class="card section">
+      <h2 style="margin:0 0 8px 0;">Subscription & Pickup</h2>
+      <p class="muted">Daily subscription options with pickup or local delivery. Delivery radius and charges vary by city (Warangal / Nashik).</p>
+
+      <table>
+        <thead>
+          <tr><th>Plan</th><th>Price</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>7-day</td><td>₹700</td><td>Prepaid • Weekday menu</td></tr>
+          <tr><td>15-day</td><td>₹1,500</td><td>Discounted • Customizable</td></tr>
+          <tr><td>30-day</td><td>₹3,000</td><td>Best value • Auto-renew option</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- About & Contact -->
+    <section class="card section" style="display:flex;flex-direction:column;gap:12px">
+      <div>
+        <h2 style="margin:0 0 8px 0;">About Us</h2>
+        <p class="muted">
+          Swadisht Meals is a home-kitchen initiative run by local cooks in Warangal and Nashik. We focus on fresh ingredients, balanced meals, and hygienic packing. We accept orders for individuals and offices.
+        </p>
+      </div>
+
+      <div class="card" style="padding:12px">
+        <h3 style="margin:0 0 8px 0;">Contact & Order</h3>
+
+        <div class="contact" style="display:flex;flex-direction:column;gap:8px">
+          <div><strong>Phone:</strong> <a href="tel:+916300886928">+91 6300886928</a></div>
+          <div><strong>WhatsApp:</strong> <a href="https://wa.me/916300886928">Chat on WhatsApp</a></div>
+          <div><strong>Email:</strong> <a href="mailto:orders@swadishtmeals.in">orders@swadishtmeals.in</a></div>
+          <div><strong>Address:</strong> Near Main Market, Warangal / Nashik</div>
+        </div>
+
+        <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+          <a class="btn btn-primary" href="tel:+916300886928">Call Now</a>
+          <a class="btn" href="https://wa.me/916300886928">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Weekly Menu -->
+    <section class="card section">
+      <h2 style="margin:0 0 8px 0;">Weekly Sample Menu</h2>
+      <p class="muted">(Example — menus rotate daily.)</p>
+
+      <table>
+        <thead><tr><th>Day</th><th>Lunch</th><th>Dinner</th></tr></thead>
+        <tbody>
+          <tr><td>Mon</td><td>Rice, Dal, Aloo Sabzi, Chapati</td><td>Roti, Mixed Veg</td></tr>
+          <tr><td>Tue</td><td>Tamarind Rice, Sambar</td><td>Chapati, Palak Paneer</td></tr>
+          <tr><td>Wed</td><td>Jeera Rice, Dal, Bhindi</td><td>Roti, Kadhi</td></tr>
+          <tr><td>Thu</td><td>Curd Rice, Fry</td><td>Pulao, Raita</td></tr>
+          <tr><td>Fri</td><td>Ghee Rice, Chicken Curry</td><td>Roti, Paneer Bhurji</td></tr>
+          <tr><td>Sat</td><td>Veg Pulao</td><td>Roti, Seasonal Veg</td></tr>
+          <tr><td>Sun</td><td>Special Thali</td><td>Light Dinner</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>
+      <div>Swadisht Meals — Home-cooked tiffins from Warangal & Nashik • <a href="mailto:orders@swadishtmeals.in">orders@swadishtmeals.in</a></div>
+      <div style="margin-top:6px">Made with care • Corporate catering available</div>
+    </footer>
+
+  </main>
+</body>
+</html>
